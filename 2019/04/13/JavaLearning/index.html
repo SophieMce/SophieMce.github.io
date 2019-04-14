@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="1.变量的命名    首先我们要保证的就是变量的名称一定要有意义(就是我们看到了变量的名字，就知道变量在这段程序中的作用)    a) Camel: 多用于给变量或字段命名，第一个单词的首字母小写，其余每个单词的首字母大写             给字段命名，前面必须加下划线。    highSchool    b) Pascal: 要求每个单词的首字母都要大写，每个单词其余的字母小写    Hi">
-<meta name="keywords" content="导航,分享">
+  <meta name="description" content="何为this代词+  何为类变量和类方法理解抽象、封装、继承和多态封装中的访问控制修饰符 四种访问级别的访问范围访问级别 | 访问控制修饰符 | 同类 | 同包 | 子类 | 不同包——- | :———— | :— | :– | :— | :—-公开    | public       | true | true | true | true受保护   | protected    | true |">
+<meta name="keywords" content="编程语言">
 <meta property="og:type" content="article">
-<meta property="og:title" content=".NET基础学习一">
-<meta property="og:url" content="http://SophicMce.com/2019/02/18/NET基础学习一/index.html">
+<meta property="og:title" content="JavaLearning">
+<meta property="og:url" content="http://SophicMce.com/2019/04/13/JavaLearning/index.html">
 <meta property="og:site_name" content="SophicMce">
-<meta property="og:description" content="1.变量的命名    首先我们要保证的就是变量的名称一定要有意义(就是我们看到了变量的名字，就知道变量在这段程序中的作用)    a) Camel: 多用于给变量或字段命名，第一个单词的首字母小写，其余每个单词的首字母大写             给字段命名，前面必须加下划线。    highSchool    b) Pascal: 要求每个单词的首字母都要大写，每个单词其余的字母小写    Hi">
+<meta property="og:description" content="何为this代词+  何为类变量和类方法理解抽象、封装、继承和多态封装中的访问控制修饰符 四种访问级别的访问范围访问级别 | 访问控制修饰符 | 同类 | 同包 | 子类 | 不同包——- | :———— | :— | :– | :— | :—-公开    | public       | true | true | true | true受保护   | protected    | true |">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-20T14:40:23.900Z">
+<meta property="og:updated_time" content="2019-04-14T14:18:38.369Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content=".NET基础学习一">
-<meta name="twitter:description" content="1.变量的命名    首先我们要保证的就是变量的名称一定要有意义(就是我们看到了变量的名字，就知道变量在这段程序中的作用)    a) Camel: 多用于给变量或字段命名，第一个单词的首字母小写，其余每个单词的首字母大写             给字段命名，前面必须加下划线。    highSchool    b) Pascal: 要求每个单词的首字母都要大写，每个单词其余的字母小写    Hi">
+<meta name="twitter:title" content="JavaLearning">
+<meta name="twitter:description" content="何为this代词+  何为类变量和类方法理解抽象、封装、继承和多态封装中的访问控制修饰符 四种访问级别的访问范围访问级别 | 访问控制修饰符 | 同类 | 同包 | 子类 | 不同包——- | :———— | :— | :– | :— | :—-公开    | public       | true | true | true | true受保护   | protected    | true |">
 
 
 
 
 
 
-  <link rel="canonical" href="http://SophicMce.com/2019/02/18/NET基础学习一/">
+  <link rel="canonical" href="http://SophicMce.com/2019/04/13/JavaLearning/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>.NET基础学习一 | SophicMce</title>
+  <title>JavaLearning | SophicMce</title>
   
 
 
@@ -323,7 +323,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://SophicMce.com/2019/02/18/NET基础学习一/">
+    <link itemprop="mainEntityOfPage" href="http://SophicMce.com/2019/04/13/JavaLearning/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hongliang Ye">
@@ -340,7 +340,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">.NET基础学习一
+          <h1 class="post-title" itemprop="name headline">JavaLearning
 
               
             
@@ -366,7 +366,7 @@
                 
               
 
-              <time title="创建时间：2019-02-18 19:01:32" itemprop="dateCreated datePublished" datetime="2019-02-18T19:01:32+08:00">2019-02-18</time>
+              <time title="创建时间：2019-04-13 14:41:14" itemprop="dateCreated datePublished" datetime="2019-04-13T14:41:14+08:00">2019-04-13</time>
             
 
             
@@ -383,7 +383,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-02-20 22:40:23" itemprop="dateModified" datetime="2019-02-20T22:40:23+08:00">2019-02-20</time>
+                <time title="修改时间：2019-04-14 22:18:38" itemprop="dateModified" datetime="2019-04-14T22:18:38+08:00">2019-04-14</time>
               
             
           </span>
@@ -400,7 +400,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/基础/" itemprop="url" rel="index"><span itemprop="name">基础</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/计算机基础课程/" itemprop="url" rel="index"><span itemprop="name">计算机基础课程</span></a></span>
 
                 
                 
@@ -435,7 +435,35 @@
       
 
       
-        <p>1.变量的命名<br>    首先我们要保证的就是变量的名称一定要有意义(就是我们看到了变量的名字，就知道变量在这段程序中的作用)<br>    a) Camel: 多用于给变量或字段命名，第一个单词的首字母小写，其余每个单词的首字母大写<br>             给字段命名，前面必须加下划线。<br>    highSchool<br>    b) Pascal: 要求每个单词的首字母都要大写，每个单词其余的字母小写<br>    HighSchoolStudent<br>    c) 函数的名称应为动词，相应的返回值名称应该对应函数名<br>2.进程<br>    一个应用程序就是一个进程，而一个进程是由多个线程组成的。<br>    进程帮助我们在内存中分配应用程序执行所需要的空间。<br>    我们可以通过进程来直接操作应用程序。<br>3.面向对象复习<br>    类决定了对象要拥有的属性和行为<br>4.关键字<br>    new<br>        a,创建对象<br>            —&gt;在堆中开辟空间<br>            —&gt;在开辟的堆空间中创建对象<br>            —&gt;调用对象的构造函数<br>        b,隐藏父类的成员<br>    this<br>    base</p>
+        <h6 id="何为this代词"><a href="#何为this代词" class="headerlink" title="何为this代词"></a>何为this代词</h6><pre><code>+ 
+</code></pre><h6 id="何为类变量和类方法"><a href="#何为类变量和类方法" class="headerlink" title="何为类变量和类方法"></a>何为类变量和类方法</h6><h6 id="理解抽象、封装、继承和多态"><a href="#理解抽象、封装、继承和多态" class="headerlink" title="理解抽象、封装、继承和多态"></a>理解抽象、封装、继承和多态</h6><h6 id="封装中的访问控制修饰符"><a href="#封装中的访问控制修饰符" class="headerlink" title="封装中的访问控制修饰符"></a>封装中的访问控制修饰符</h6><ul>
+<li>四种访问级别的访问范围<br>访问级别 | 访问控制修饰符 | 同类 | 同包 | 子类 | 不同包<br>——- | :———— | :— | :– | :— | :—-<br>公开    | public       | true | true | true | true<br>受保护   | protected    | true | true | true | false<br>默认     | 没有修饰符   | true | true | false | false<br>私有    | private      | true | false | false | false<br>某些想要访问到的却不可以直接访问的成员变量可以使用成员方法获取到</li>
+</ul>
+<h6 id="包-必要性"><a href="#包-必要性" class="headerlink" title="包-必要性"></a>包-必要性</h6><ol>
+<li>区分相同名字的类</li>
+<li>当类很多时，可以很好的管理类</li>
+<li>控制访问范围</li>
+</ol>
+<ul>
+<li>使用小写字母</li>
+</ul>
+<h6 id="继承-class-子类-extends-父类"><a href="#继承-class-子类-extends-父类" class="headerlink" title="继承:class 子类 extends 父类"></a>继承:class 子类 extends 父类</h6><ul>
+<li>结论：public、protected、默认的修饰符所定义的属性和方法可以被子类继承<br>  privated修饰的属性和方法不可以被子类继承</li>
+</ul>
+<h6 id="重载-overload"><a href="#重载-overload" class="headerlink" title="重载(overload)"></a>重载(overload)</h6><pre><code>1.一个返回float类型的方法和一个返回int类型的方法，调用方法时参数中一个为int类型，一个为float类型，编译器会自动调用float类型的，因为是低精度的自动往高精度的转(float为高精度)
+2.方法的重载是根据使用者给出的参数决定调用哪一个方法
+</code></pre><ul>
+<li>注意事项:<pre><code>1.方法名相同
+2.参数的类型，个数，顺序至少有一个不同
+3.返回类型不一样，不能构成重载
+4.方法返回类型可以不同
+5.方法修饰符可以不同
+</code></pre></li>
+</ul>
+<h6 id="覆盖-override"><a href="#覆盖-override" class="headerlink" title="覆盖(override)"></a>覆盖(override)</h6><ul>
+<li>注意事项:<br>1.子类的方法的返回类型，参数，方法名称，要和父类方法的返回类型，参数，方法名称完全一样<br>2.子类方法<strong>不能缩小</strong>父类方法的访问权限</li>
+</ul>
+<h6 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h6><p>+ </p>
 
       
     </div>
@@ -467,9 +495,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/导航/" rel="tag"># 导航</a>
-          
-            <a href="/tags/分享/" rel="tag"># 分享</a>
+            <a href="/tags/编程语言/" rel="tag"># 编程语言</a>
           
         </div>
       
@@ -482,8 +508,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/29/即兴文笔/" rel="next" title="即兴文笔">
-                <i class="fa fa-chevron-left"></i> 即兴文笔
+              <a href="/2019/04/08/数据结构与算法/" rel="next" title="数据结构与算法">
+                <i class="fa fa-chevron-left"></i> 数据结构与算法
               </a>
             
           </div>
@@ -491,10 +517,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/08/BlogWriting/" rel="prev" title="BlogWriting">
-                BlogWriting <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -539,8 +561,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -666,6 +697,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#何为this代词"><span class="nav-number">1.</span> <span class="nav-text">何为this代词</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#何为类变量和类方法"><span class="nav-number">2.</span> <span class="nav-text">何为类变量和类方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#理解抽象、封装、继承和多态"><span class="nav-number">3.</span> <span class="nav-text">理解抽象、封装、继承和多态</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#封装中的访问控制修饰符"><span class="nav-number">4.</span> <span class="nav-text">封装中的访问控制修饰符</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#包-必要性"><span class="nav-number">5.</span> <span class="nav-text">包-必要性</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#继承-class-子类-extends-父类"><span class="nav-number">6.</span> <span class="nav-text">继承:class 子类 extends 父类</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#重载-overload"><span class="nav-number">7.</span> <span class="nav-text">重载(overload)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#覆盖-override"><span class="nav-number">8.</span> <span class="nav-text">覆盖(override)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#多态"><span class="nav-number">9.</span> <span class="nav-text">多态</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
