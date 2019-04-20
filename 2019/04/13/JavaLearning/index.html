@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="SophicMce">
 <meta property="og:description" content="何为this代词+  何为类变量和类方法理解抽象、封装、继承和多态封装中的访问控制修饰符 四种访问级别的访问范围访问级别 | 访问控制修饰符 | 同类 | 同包 | 子类 | 不同包——- | :———— | :— | :– | :— | :—-公开    | public       | true | true | true | true受保护   | protected    | true |">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-16T10:27:08.792Z">
+<meta property="og:updated_time" content="2019-04-20T10:59:11.394Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaLearning">
 <meta name="twitter:description" content="何为this代词+  何为类变量和类方法理解抽象、封装、继承和多态封装中的访问控制修饰符 四种访问级别的访问范围访问级别 | 访问控制修饰符 | 同类 | 同包 | 子类 | 不同包——- | :———— | :— | :– | :— | :—-公开    | public       | true | true | true | true受保护   | protected    | true |">
@@ -383,7 +383,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-16 18:27:08" itemprop="dateModified" datetime="2019-04-16T18:27:08+08:00">2019-04-16</time>
+                <time title="修改时间：2019-04-20 18:59:11" itemprop="dateModified" datetime="2019-04-20T18:59:11+08:00">2019-04-20</time>
               
             
           </span>
@@ -487,6 +487,46 @@
 </ul>
 <h3 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h3><h6 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h6><ul>
 <li>字符串用“==”比较，是比较地址是否相等，比较值是否相等，需使用equals</li>
+</ul>
+<h6 id="HashMap和Hashtable的区别"><a href="#HashMap和Hashtable的区别" class="headerlink" title="HashMap和Hashtable的区别"></a>HashMap和Hashtable的区别</h6><ul>
+<li>相同点:都是java的集合类，都可以用来存放java对象</li>
+<li>不同点:<br>  1.历史原因：Hashtable是基于Dictionary类的，HashMap是Java 1.2引进的Map接口的一个实现<br>  2.同步性:Hashtable是同步的,这个类中的一些方法保证了Hashtable中的对象是线程安全的.而HashMap是异步的,因此HashMap中的对象并不是线程安全的.因为同步的要求会影响执行的效率,所以若果不需要线程安全的集合那么使用HashMap是一个很好的选择,这样可以避免由于同步带来的不必要的性能开销,从而提高效率.<br>  3.值:HashMap可以让你将空值作为一个表的条目的key或value,但Hashtable是不能放入空值的(null)</li>
+</ul>
+<h6 id="Vector和ArrayList的异同点"><a href="#Vector和ArrayList的异同点" class="headerlink" title="Vector和ArrayList的异同点"></a>Vector和ArrayList的异同点</h6><ul>
+<li>相同点:都是java的集合类，都可以存放java对象</li>
+<li>不同点:<pre><code>1.Vector是同步，所以安全，ArrayList是异步的，所以不安全，但效率高
+2.Vector的数据增长是增长其自身的一倍，ArrayList是增长其自身的50%，若存放大量数据，需用Vector，可以通过设置集合的初始化大小避免资源的消耗
+</code></pre></li>
+</ul>
+<h6 id="集合框架小结"><a href="#集合框架小结" class="headerlink" title="集合框架小结"></a>集合框架小结</h6><p>1.若要求线程安全,使用Vector、Hashtable<br>2.若不要求线程安全,应使用ArrayList,LinkedList,HashMap<br>3.若要求键值对,则使用HashMap,Hashtable<br>4.若数据量很大,又要线程安全考虑Vector</p>
+<h6 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h6><ul>
+<li>定义一个类，但是类的具体类型不确定，可以用泛型定义，根据具体情况确定类</li>
+<li>泛型的本质是参数化类型，也就是所操纵的数据类型被指定为一个参数.这种参数类型可以用在类，接口和方法的创建中,分别被称为泛型类、泛型接口、泛型方法.</li>
+<li>泛型的好处就是安全简单，在编译的时候检查类型安全，并且所有的强制类型转换都是自动和隐式的，提高代码的重用率</li>
+<li>优点:<pre><code>1.类型安全
+2.向后兼容
+3.层次清晰
+4.性能较高，用GJ编写的代码可以为java编译器和虚拟机带来更多的类型信息，这些信息对java程序做进一步的优化提供条件
+</code></pre></li>
+</ul>
+<h6 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h6><ul>
+<li>获取类中的方法</li>
+</ul>
+<h6 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h6><ul>
+<li><p>2种方法处理:<br>  1.在发生异常的地方直接处理<br>  2.将异常抛给调用者,让调用者处理</p>
+</li>
+<li><p>异常分类:<br>  1.检查性异常，编译器事先能确定的异常<br>  2.运行期异常<br>  3.错误:可能源于bug,更可能源于环境问题</p>
+</li>
+</ul>
+<p><code>try...catch...finally</code></p>
+<h6 id="图形用户界面-swing"><a href="#图形用户界面-swing" class="headerlink" title="图形用户界面(swing)"></a>图形用户界面(swing)</h6><ul>
+<li>布局管理器<br>  1.组件在容器中的位置和大小由布局管理器决定,所有的容器都会使用一个布局管理器,通过它来自动进行组件的布局管理<br>  2.种类有五种: 流式布局管理器(FlowLayout)、边界布局管理器(BorderLayout)、网格布局管理器(GridLayout)、卡片布局管理器(CardLayout)、网格包布局管理器(GridBagLayout).前三种是常见的布局管理器<br>1.边界布局管理器(BorderLayout)<br>注意事项:<pre><code>+ 不是五个部分都必须添加
++ 中部组件会自动调节大小
++ JFrame，JDialog默认布局管理器就是BorderLayout
+</code></pre>2.流式布局<br>注意事项:<pre><code>+ 不限制他所管理的组件大小,允许他们有最佳大小
++ 当容器被缩放时,组件的位置可能有变化，但组件的大小不变
++ 默认组件是居中对齐，可以通过FlowLayout(int align)函数来指定对齐方式
+</code></pre></li>
 </ul>
 
       
@@ -732,7 +772,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#何为this代词"><span class="nav-number">1.</span> <span class="nav-text">何为this代词</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#何为类变量和类方法"><span class="nav-number">2.</span> <span class="nav-text">何为类变量和类方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#理解抽象、封装、继承和多态"><span class="nav-number">3.</span> <span class="nav-text">理解抽象、封装、继承和多态</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#封装中的访问控制修饰符"><span class="nav-number">4.</span> <span class="nav-text">封装中的访问控制修饰符</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#包-必要性"><span class="nav-number">5.</span> <span class="nav-text">包-必要性</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#继承-class-子类-extends-父类"><span class="nav-number">6.</span> <span class="nav-text">继承:class 子类 extends 父类</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#重载-overload"><span class="nav-number">7.</span> <span class="nav-text">重载(overload)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#覆盖-override"><span class="nav-number">8.</span> <span class="nav-text">覆盖(override)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#多态"><span class="nav-number">9.</span> <span class="nav-text">多态</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#抽象类"><span class="nav-number">10.</span> <span class="nav-text">抽象类</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#接口"><span class="nav-number">11.</span> <span class="nav-text">接口</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#接口实现多态"><span class="nav-number">12.</span> <span class="nav-text">接口实现多态</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#final"><span class="nav-number">13.</span> <span class="nav-text">final</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#集合"><span class="nav-number"></span> <span class="nav-text">集合</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#ArrayList"><span class="nav-number">1.</span> <span class="nav-text">ArrayList</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#何为this代词"><span class="nav-number">1.</span> <span class="nav-text">何为this代词</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#何为类变量和类方法"><span class="nav-number">2.</span> <span class="nav-text">何为类变量和类方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#理解抽象、封装、继承和多态"><span class="nav-number">3.</span> <span class="nav-text">理解抽象、封装、继承和多态</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#封装中的访问控制修饰符"><span class="nav-number">4.</span> <span class="nav-text">封装中的访问控制修饰符</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#包-必要性"><span class="nav-number">5.</span> <span class="nav-text">包-必要性</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#继承-class-子类-extends-父类"><span class="nav-number">6.</span> <span class="nav-text">继承:class 子类 extends 父类</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#重载-overload"><span class="nav-number">7.</span> <span class="nav-text">重载(overload)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#覆盖-override"><span class="nav-number">8.</span> <span class="nav-text">覆盖(override)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#多态"><span class="nav-number">9.</span> <span class="nav-text">多态</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#抽象类"><span class="nav-number">10.</span> <span class="nav-text">抽象类</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#接口"><span class="nav-number">11.</span> <span class="nav-text">接口</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#接口实现多态"><span class="nav-number">12.</span> <span class="nav-text">接口实现多态</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#final"><span class="nav-number">13.</span> <span class="nav-text">final</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#集合"><span class="nav-number"></span> <span class="nav-text">集合</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#ArrayList"><span class="nav-number">1.</span> <span class="nav-text">ArrayList</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#HashMap和Hashtable的区别"><span class="nav-number">2.</span> <span class="nav-text">HashMap和Hashtable的区别</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Vector和ArrayList的异同点"><span class="nav-number">3.</span> <span class="nav-text">Vector和ArrayList的异同点</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#集合框架小结"><span class="nav-number">4.</span> <span class="nav-text">集合框架小结</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#泛型"><span class="nav-number">5.</span> <span class="nav-text">泛型</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#反射"><span class="nav-number">6.</span> <span class="nav-text">反射</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#异常处理"><span class="nav-number">7.</span> <span class="nav-text">异常处理</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#图形用户界面-swing"><span class="nav-number">8.</span> <span class="nav-text">图形用户界面(swing)</span></a></li></ol></li></div>
             
 
           </div>
